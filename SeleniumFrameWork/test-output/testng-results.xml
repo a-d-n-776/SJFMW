@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-16T20:21:52 IST" name="Default suite" finished-at="2022-05-16T20:22:09 IST" duration-ms="17386">
+  <suite started-at="2022-05-16T23:06:20 IST" name="Default suite" finished-at="2022-05-16T23:06:29 IST" duration-ms="8812">
     <groups>
     </groups>
-    <test started-at="2022-05-16T20:21:52 IST" name="Default test" finished-at="2022-05-16T20:22:09 IST" duration-ms="17386">
+    <test started-at="2022-05-16T23:06:20 IST" name="Default test" finished-at="2022-05-16T23:06:29 IST" duration-ms="8812">
       <class name="test.ExtentReportsDemoWithTestNG">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.ExtentReportsDemoWithTestNG@7b9a4292]" started-at="2022-05-16T20:21:50 IST" name="setup" finished-at="2022-05-16T20:21:52 IST" duration-ms="2319" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:19 IST" name="setup" finished-at="2022-05-16T23:06:20 IST" duration-ms="349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="test1()[pri:0, instance:test.ExtentReportsDemoWithTestNG@7b9a4292]" started-at="2022-05-16T20:21:52 IST" name="test1" finished-at="2022-05-16T20:21:52 IST" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:20 IST" name="setUpTest" finished-at="2022-05-16T23:06:22 IST" duration-ms="2087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="test1()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:22 IST" name="test1" finished-at="2022-05-16T23:06:22 IST" duration-ms="28" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:test.ExtentReportsDemoWithTestNG@7b9a4292]" started-at="2022-05-16T20:21:52 IST" name="test2" finished-at="2022-05-16T20:21:52 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method signature="test4()[pri:0, instance:test.ExtentReportsDemoWithTestNG@7b9a4292]" started-at="2022-05-16T20:21:52 IST" name="test4" finished-at="2022-05-16T20:22:09 IST" duration-ms="17308" status="PASS">
+        <test-method signature="test4()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:22 IST" name="test4" finished-at="2022-05-16T23:06:29 IST" duration-ms="6652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ExtentReportsDemoWithTestNG@7b9a4292]" started-at="2022-05-16T20:22:09 IST" name="tearDown" finished-at="2022-05-16T20:22:10 IST" duration-ms="779" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:29 IST" name="tearDownTest" finished-at="2022-05-16T23:06:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.ExtentReportsDemoWithTestNG@294425a7]" started-at="2022-05-16T23:06:29 IST" name="tearDown" finished-at="2022-05-16T23:06:30 IST" duration-ms="1015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

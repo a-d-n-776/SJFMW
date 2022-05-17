@@ -26,7 +26,7 @@ public class BIPS_Login_TC {
         String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
-		test1.log(Status.INFO, "starting Test Case");
+		test1.log(Status.INFO, "started Testing");
 		driver.get("https://biphrm-biplah-stg1.pegacloud.io/prweb/app/default/c5mb0Z99oLKgPL-hk4L4rty7OLzbbezr*/!STANDARD"
 );
 		test1.pass("The URL is open.");

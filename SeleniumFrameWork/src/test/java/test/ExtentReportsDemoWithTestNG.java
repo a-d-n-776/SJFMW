@@ -5,7 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -29,9 +31,16 @@ public class ExtentReportsDemoWithTestNG {
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		
+	
+	}
+	
+	@BeforeTest
+	public void setUpTest() {
+		
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver/chromedriver.exe");
 		driver = new ChromeDriver();
+		
 	}
 
 
@@ -54,7 +63,7 @@ public class ExtentReportsDemoWithTestNG {
 		
 	}
 	
-	@Test
+	//@Test
 	public void test2() {
 		  
         ExtentTest test = extent.createTest("My2ndTest", "Sample description");
@@ -91,7 +100,7 @@ public class ExtentReportsDemoWithTestNG {
 		  
         ExtentTest test = extent.createTest("BIPSLoginTC","this is a test to validate BIPSLoginTC functionality");
         //test.log(Status.INFO, "This step shows usage of log(status, details)");
-        test.log(Status.INFO, "This step shows the Test started)");
+        test.log(Status.INFO, "This step shows the Testing started");
         
         driver.get("https://biphrm-biplah-stg1.pegacloud.io/prweb/app/default/c5mb0Z99oLKgPL-hk4L4rty7OLzbbezr*/!STANDARD");
         test.pass("This step shows The URL is open");
@@ -110,20 +119,20 @@ public class ExtentReportsDemoWithTestNG {
 		driver.close();
 		test.pass("This step shows Closed the browser");
 		//driver.quit();
-		//test.addScreenCaptureFromPath("screenshot.png");
+		test.addScreenCaptureFromPath("screenshot.png");
 		test.info("This step shows Test Completed");
 		
         
 	}
 	
+	@AfterTest
+	public void tearDownTest() {
 	
-	
-	
-	
-	
-	
-	
-	
+		//close browser
+		//driver.close();
+		//driver.quit();
+		System.out.println("Test Completed Successfully");
+	}
 
 	@AfterSuite
 	public void tearDown() {
