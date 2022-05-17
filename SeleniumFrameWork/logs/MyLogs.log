@@ -2,3 +2,13 @@
 [ERROR] 2022-05-17 19:06:22.075 [main] Log4jDemo - This is an error message
 [WARN ] 2022-05-17 19:06:22.075 [main] Log4jDemo - This is a warning message
 [FATAL] 2022-05-17 19:06:22.076 [main] Log4jDemo - This is a fatal message
+[INFO ] 2022-05-17 20:30:04.885 [main] Log4jDemo - Browser started
+[INFO ] 2022-05-17 20:30:08.061 [main] Log4jDemo - Navigated to google.com
+[INFO ] 2022-05-17 20:31:21.972 [main] Log4jDemo - Browser started
+[INFO ] 2022-05-17 20:31:25.320 [main] Log4jDemo - Navigated to google.com
+[INFO ] 2022-05-17 20:35:26.036 [main] Log4jDemo - Browser started
+[INFO ] 2022-05-17 20:35:29.522 [main] Log4jDemo - Navigated to google.com
+[INFO ] 2022-05-17 20:36:18.239 [main] Log4jDemo - Browser started
+[INFO ] 2022-05-17 20:36:21.677 [main] Log4jDemo - Navigated to google.com
+[INFO ] 2022-05-17 20:48:18.681 [main] Log4jDemo - Browser started
+[INFO ] 2022-05-17 20:49:08.503 [main] Log4jDemo - Browser started

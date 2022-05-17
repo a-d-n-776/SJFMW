@@ -15,8 +15,8 @@ public class PropertiesFile {
 
 	public static void main(String[] args) {
 		getProperties();
-		//setProperties();
-		//getProperties();
+		setProperties();
+		getProperties();
 	}
 
 	public static void getProperties() {
@@ -25,17 +25,16 @@ public class PropertiesFile {
 			prop.load(input);
 			String browser = prop.getProperty("browser");
 			System.out.println(browser);
-			//TestNG_Demo.browserName=browser;
-			System.out.println(browser);
+			TestNG_Demo.browserName=browser;
 
 		}catch(Exception exp) {
 			System.out.println(exp.getMessage());
 			System.out.println(exp.getCause());
 			exp.printStackTrace();
 		}
-	
+	}
 
-	//public static void setProperties() {
+	public static void setProperties() {
 		try {
 			OutputStream output = new FileOutputStream(projectPath+"/src/test/java/config/config.properties");
 			prop.setProperty("result", "pass");
@@ -49,5 +48,3 @@ public class PropertiesFile {
 	}
 
 }
-
-
