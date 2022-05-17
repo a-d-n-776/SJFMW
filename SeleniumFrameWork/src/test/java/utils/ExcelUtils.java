@@ -9,7 +9,7 @@ public class ExcelUtils {
 	static XSSFWorkbook workbook;
 	static XSSFSheet sheet;
 
-	// Constructor
+	
 	public ExcelUtils(String excelPath, String sheetName) {
 		try {
 	
@@ -24,10 +24,9 @@ public class ExcelUtils {
 	
 	
 	public static void main(String[] args) {
-		getRowCount();
-		getColCount();
-		getCellDataString(0,0);
-		getCellDataNumber(1,1);
+		//getRowCount();
+		//getCellDataString(0,0);
+		//getCellDataNumber(1,1);
 	}
 
 	public static int getRowCount() {

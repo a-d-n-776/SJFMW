@@ -10,7 +10,7 @@ public class ExcelUtilsDemo {
 		
 		excel.getRowCount();
 		excel.getCellDataString(0, 0);
-		excel.getCellDataNumber(1, 1);
+		excel.getCellDataNumber(3, 1);
 		
 		
 		
