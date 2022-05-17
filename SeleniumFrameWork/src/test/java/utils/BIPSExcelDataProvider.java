@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import config.PropertiesFile;
 
-public class ExcelDataProvider {
+public class BIPSExcelDataProvider {
 	
 	WebDriver driver=null;
 	
@@ -26,10 +26,10 @@ public class ExcelDataProvider {
 	public void test1(String username, String password) throws Exception {
 		System.out.println(username+" | "+password);
 		
-		driver.get("https://opensource-demo.orangehrmlive.com/");
-		driver.findElement(By.id("txtUsername")).sendKeys(username);
+		driver.get("https://biphrm-biplah-stg1.pegacloud.io/prweb/app/default/c5mb0Z99oLKgPL-hk4L4rty7OLzbbezr*/!STANDARD");
+		driver.findElement(By.id("txtUserID")).sendKeys(username);
 		driver.findElement(By.id("txtPassword")).sendKeys(password);
-		driver.findElement(By.id("btnLogin")).click();
+		driver.findElement(By.id("sub")).click();
 		Thread.sleep(2000);
 		
 		
@@ -40,8 +40,8 @@ public class ExcelDataProvider {
 	
 	@DataProvider(name = "test1data")
 	public Object[][] getData() {
-		//String excelPath = "C:\\Users\\cnbna\\git\\SJFMW\SeleniumFrameWork\\excel\\data.xlsx";
-		String excelPath = "C:\\Users\\cnbna\\Desktop\\BIPS Application\\data.xlsx";
+		//String excelPath = "C:\\Users\\cnbna\\git\\SJFMW\SeleniumFrameWork\\excel\\BIPSdata.xlsx";
+		String excelPath = "C:\\Users\\cnbna\\Desktop\\BIPS Application\\BIPSdata.xlsx";
 		Object data[][] = testData(excelPath, "Sheet1");
 		return data;
 		
