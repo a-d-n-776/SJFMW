@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-17T16:20:23 IST" name="Suite1" finished-at="2022-05-17T16:20:37 IST" duration-ms="14544">
+  <suite started-at="2022-05-17T16:48:21 IST" name="Suite1" finished-at="2022-05-17T16:48:32 IST" duration-ms="11600">
     <groups>
     </groups>
-    <test started-at="2022-05-17T16:20:23 IST" name="Test1" finished-at="2022-05-17T16:20:37 IST" duration-ms="14544">
+    <test started-at="2022-05-17T16:48:21 IST" name="Test1" finished-at="2022-05-17T16:48:32 IST" duration-ms="11600">
       <class name="test.TestNG_Demo2">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:test.TestNG_Demo2@4cc451f2]" started-at="2022-05-17T16:20:25 IST" name="setUpTest" finished-at="2022-05-17T16:20:27 IST" duration-ms="1446" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:test.TestNG_Demo2@59309333]" started-at="2022-05-17T16:48:23 IST" name="setUpTest" finished-at="2022-05-17T16:48:25 IST" duration-ms="1597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="googleSearch()[pri:0, instance:test.TestNG_Demo2@4cc451f2]" started-at="2022-05-17T16:20:30 IST" name="googleSearch" finished-at="2022-05-17T16:20:33 IST" duration-ms="2741" status="PASS">
+        <test-method signature="googleSearch3()[pri:0, instance:test.TestNG_Demo2@59309333]" started-at="2022-05-17T16:48:25 IST" name="googleSearch3" finished-at="2022-05-17T16:48:28 IST" duration-ms="3076" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- googleSearch -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:test.TestNG_Demo2@4cc451f2]" started-at="2022-05-17T16:20:37 IST" name="tearDownTest" finished-at="2022-05-17T16:20:37 IST" duration-ms="259" status="PASS">
+        </test-method> <!-- googleSearch3 -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:test.TestNG_Demo2@59309333]" started-at="2022-05-17T16:48:32 IST" name="tearDownTest" finished-at="2022-05-17T16:48:32 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestNG_Demo2 -->
       <class name="test.TestNG_Demo">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:test.TestNG_Demo@4466af20]" started-at="2022-05-17T16:20:23 IST" name="setUpTest" finished-at="2022-05-17T16:20:25 IST" duration-ms="2674" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:test.TestNG_Demo@7b9a4292]" started-at="2022-05-17T16:48:21 IST" name="setUpTest" finished-at="2022-05-17T16:48:23 IST" duration-ms="2431" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="googleSearch()[pri:0, instance:test.TestNG_Demo@4466af20]" started-at="2022-05-17T16:20:27 IST" name="googleSearch" finished-at="2022-05-17T16:20:30 IST" duration-ms="3169" status="PASS">
+        <test-method signature="googleSearch()[pri:0, instance:test.TestNG_Demo@7b9a4292]" started-at="2022-05-17T16:48:25 IST" name="googleSearch" finished-at="2022-05-17T16:48:28 IST" duration-ms="3130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- googleSearch -->
-        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:test.TestNG_Demo@4466af20]" started-at="2022-05-17T16:20:33 IST" name="tearDownTest" finished-at="2022-05-17T16:20:37 IST" duration-ms="4168" status="PASS">
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:test.TestNG_Demo@7b9a4292]" started-at="2022-05-17T16:48:28 IST" name="tearDownTest" finished-at="2022-05-17T16:48:32 IST" duration-ms="4159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->

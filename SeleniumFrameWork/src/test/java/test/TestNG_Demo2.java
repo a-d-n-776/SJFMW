@@ -21,7 +21,7 @@ public class TestNG_Demo2 {
 		}
 	
 		@Test
-		public void googleSearch() {
+		public void googleSearch2() {
 		
 		//goto google.com
 		driver.get("https://google.com");
@@ -35,6 +35,25 @@ public class TestNG_Demo2 {
 		//driver.findElement(By.name("btnk")).sendKeys(Keys.ENTER);
 		
 	}
+		
+		
+		@Test
+		public void googleSearch3() {
+		
+		//goto google.com
+		driver.get("https://google.com");
+		
+		//enter text in search textbox
+		driver.findElement(By.name("q")).sendKeys("AutomationTestingTestNG");
+		
+		//click on search button
+		//driver.findElement(By.name("btnK")).click();
+		//driver.findElement(By.name("btnK")).sendKeys(Keys.RETURN);
+		//driver.findElement(By.name("btnk")).sendKeys(Keys.ENTER);
+		
+	}
+		
+		
 	
 		@AfterTest
 	public void tearDownTest() {

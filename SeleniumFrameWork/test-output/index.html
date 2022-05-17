@@ -109,7 +109,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="test.TestNG_Demo2" class="method navigator-link" hash-for-method="googleSearch">googleSearch</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="test.TestNG_Demo2" class="method navigator-link" hash-for-method="googleSearch3">googleSearch3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -127,14 +127,14 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.TestNG_Demo</span>
+              <span class="class-name">test.TestNG_Demo2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="googleSearch">
-                  </a> <!-- googleSearch -->
-                  <span class="method-name">googleSearch</span>
+                  <a name="googleSearch3">
+                  </a> <!-- googleSearch3 -->
+                  <span class="method-name">googleSearch3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -142,7 +142,7 @@
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.TestNG_Demo2</span>
+              <span class="class-name">test.TestNG_Demo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -163,11 +163,15 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test1&quot;&gt;
+&lt;suite parallel=&quot;classes&quot; name=&quot;Suite1&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;classes&quot; name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.TestNG_Demo&quot;/&gt;
-      &lt;class name=&quot;test.TestNG_Demo2&quot;/&gt;
+      &lt;class name=&quot;test.TestNG_Demo2&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;googleSearch3&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- test.TestNG_Demo2 --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -211,16 +215,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'googleSearch')
 data.setCell(0, 2, 'test.TestNG_Demo')
-data.setCell(0, 3, 3169);
+data.setCell(0, 3, 3130);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'googleSearch')
+data.setCell(1, 1, 'googleSearch3')
 data.setCell(1, 2, 'test.TestNG_Demo2')
-data.setCell(1, 3, 2741);
+data.setCell(1, 3, 3076);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -235,9 +239,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">test.TestNG_Demo2</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">googleSearch2</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite1" class="panel">
@@ -256,35 +267,35 @@ return data;
               <div class="chronological-class-name">test.TestNG_Demo2</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">2676 ms</span>
+                <span class="method-start">2432 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestNG_Demo</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">googleSearch</span>
-                <span class="method-start">4171 ms</span>
+                <span class="method-start">4078 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestNG_Demo2</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">googleSearch</span>
-                <span class="method-start">7350 ms</span>
+                <span class="method-name">googleSearch3</span>
+                <span class="method-start">4078 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestNG_Demo</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">10094 ms</span>
+                <span class="method-start">7215 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.TestNG_Demo2</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDownTest</span>
-                <span class="method-start">14262 ms</span>
+                <span class="method-start">11374 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
