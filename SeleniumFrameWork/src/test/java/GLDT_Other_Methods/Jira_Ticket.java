@@ -31,14 +31,20 @@ public class Jira_Ticket {
 		String userid = null;
 	    String password = null;
 		WebDriver driver = BIPS_Login.driver;
-		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\cnbna\\git\\SJFMW\\SeleniumFrameWork\\drivers\\chromedriver\\chromedriver.exe");
 //		driver = new ChromeDriver();
 		String baseUrl = "https://id.atlassian.com/login?continue=https%3A%2F%2F1abc12345.atlassian.net%2Flogin%3FredirectCount%3D1%26dest-url%3D%252Fjira%252Fsoftware%252Fc%252Fprojects%252FP1%252Fissues%26application%3Djira&application=jira";
 		driver.get(baseUrl);
 		driver.manage().window().maximize(); //Maximise browser window
 		try { 
+           // FileInputStream fStream = new FileInputStream(new File(
+                   // "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
+            
             FileInputStream fStream = new FileInputStream(new File(
-                    "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); //Enter the path to your excel here
+            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx"));
+            
+            //Enter the path to your excel here
 
             // Create workbook instance referencing the file created above
             XSSFWorkbook workbook = new XSSFWorkbook(fStream);
@@ -87,8 +93,9 @@ public class Jira_Ticket {
 		String Jira_Id = Jira_Text.getText();
 		System.out.println(Jira_Id);
 		
-		File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-        
+		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");
+		
         try {
             //Creating input stream
             FileInputStream inputStream = new FileInputStream(xlsxFile);

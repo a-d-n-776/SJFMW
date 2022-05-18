@@ -6,13 +6,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import BIPS.BIPS_Login;
 import GLDT_Methods.GLDT_TestCase_Steps;
-//import GLDT_Other_Methods.Make_Cell_Empty;
+import GLDT_Other_Methods.Make_Cell_Empty;
 
 public class GLDT_TestCases {
 	
-	//@BeforeClass
+	@BeforeClass
 	public void Make_Cell_Empty() throws Exception {
-		//Make_Cell_Empty.Delete_Cell_Contents();
+		Make_Cell_Empty.Delete_Cell_Contents();
 	}
 	@BeforeMethod
 	public void Tama_User_Login() throws Exception {

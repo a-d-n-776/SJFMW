@@ -49,16 +49,19 @@ public class BIPS_Login_TC {
 		}
 		
 		//driver.findElement(By.id("//*[@id=\"headerlabel701\"]/h1")).click();
-		driver.findElement(By.xpath("//H1[@class='layout-group-item-title'])[2]")).click();
 		
+		driver.findElement(By.xpath("//iframe[@src='about:blank']"));
 		
+		driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamicallyinitiate.click();
+		
+	
 		
 		
 		//driver.findElement(By.name("btnK")).sendKeys(Keys.RETURN);
 		//driver.findElement(By.name("btnK")).click();
 		//test1.pass("Pressed keyboard enter key");
 		
-		driver.close();
+		//driver.close();
 		//driver.quit();
 		test1.pass("Closed the browser");
 		
