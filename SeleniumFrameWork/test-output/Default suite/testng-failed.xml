@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utils.BIPSExcelDataProvider">
+      <class name="GLDT_TestCases.GLDT_TestCases">
         <methods>
-          <include name="test1" invocation-numbers="1 2"/>
-          <include name="setUpTest"/>
+          <include name="GLDT_TC_01"/>
+          <include name="Tama_User_Login"/>
         </methods>
-      </class> <!-- utils.BIPSExcelDataProvider -->
+      </class> <!-- GLDT_TestCases.GLDT_TestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
