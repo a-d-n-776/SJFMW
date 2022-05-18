@@ -48,7 +48,8 @@ public class BIPS_Login_TC {
 			e.printStackTrace();
 		}
 		
-		driver.findElement(By.id("//*[@id=\"headerlabel701\"]/h1")).click();
+		//driver.findElement(By.id("//*[@id=\"headerlabel701\"]/h1")).click();
+		driver.findElement(By.xpath("//H1[@class='layout-group-item-title'])[2]")).click();
 		
 		
 		
@@ -57,7 +58,7 @@ public class BIPS_Login_TC {
 		//driver.findElement(By.name("btnK")).click();
 		//test1.pass("Pressed keyboard enter key");
 		
-		//driver.close();
+		driver.close();
 		//driver.quit();
 		test1.pass("Closed the browser");
 		

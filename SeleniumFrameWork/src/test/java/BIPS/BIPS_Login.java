@@ -27,7 +27,8 @@ public class BIPS_Login {
 	public static void TAMA_User_Login() throws Exception {
 		String userid = null;
 	    String password = null;
-		System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\cnbna\\git\\SJFMW\\SeleniumFrameWork\\drivers\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver();    
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         String baseUrl = "https://biphrm-biplah-stg1.pegacloud.io/prweb/app/default/c5mb0Z99oLKgPL-hk4L4rty7OLzbbezr*/!STANDARD";
