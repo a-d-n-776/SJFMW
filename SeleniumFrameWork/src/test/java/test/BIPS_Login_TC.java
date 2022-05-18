@@ -41,12 +41,23 @@ public class BIPS_Login_TC {
 		//driver.findElement(By.id("sub")).click();
 		test1.pass("User successfully logged into the application.");
 		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		driver.findElement(By.id("//*[@id=\"headerlabel701\"]/h1")).click();
+		
+		
+		
 		
 		//driver.findElement(By.name("btnK")).sendKeys(Keys.RETURN);
 		//driver.findElement(By.name("btnK")).click();
 		//test1.pass("Pressed keyboard enter key");
 		
-		driver.close();
+		//driver.close();
 		//driver.quit();
 		test1.pass("Closed the browser");
 		
