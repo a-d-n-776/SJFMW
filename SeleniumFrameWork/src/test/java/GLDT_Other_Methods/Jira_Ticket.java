@@ -42,7 +42,7 @@ public class Jira_Ticket {
                    // "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
             
             FileInputStream fStream = new FileInputStream(new File(
-            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx"));
+            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx"));
             
             //Enter the path to your excel here
 
@@ -94,7 +94,7 @@ public class Jira_Ticket {
 		System.out.println(Jira_Id);
 		
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");
 		
         try {
             //Creating input stream

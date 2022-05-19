@@ -17,7 +17,7 @@ public class Make_Cell_Empty {
 	public static void Delete_Cell_Contents() throws Exception {
 	
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);

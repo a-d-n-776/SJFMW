@@ -74,7 +74,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx"));
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            //Enter the path to your excel here
 
@@ -175,7 +175,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            
 	            //Enter the path to your excel here
@@ -256,7 +256,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 
@@ -350,7 +350,7 @@ public class GLDT_TestCase_Steps {
 		                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); //Enter the path to your excel here
 		        
 				FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 		        // Create workbook instance referencing the file created above
 		        XSSFWorkbook workbook = new XSSFWorkbook(fStream);
 
@@ -467,7 +467,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 
@@ -541,7 +541,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 

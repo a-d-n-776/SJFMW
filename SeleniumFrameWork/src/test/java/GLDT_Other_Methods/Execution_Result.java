@@ -19,7 +19,7 @@ public class Execution_Result {
 	public static void Fill_Execution_Result() throws Exception {
 		
 //File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");
+File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");
 
         
         try {
@@ -56,7 +56,7 @@ File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitat
 	public static void Fill_caseid_and_Result() throws Exception {
 		
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);
@@ -91,7 +91,7 @@ File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitat
 	public static void Fill_Fail_Result() throws Exception {
 		
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);
@@ -125,7 +125,7 @@ File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitat
 	public static void Dependency_TC_Failed() throws Exception {
 		WebDriver driver = BIPS_Login.driver;
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");
         try {
             //Creating input stream
             FileInputStream inputStream = new FileInputStream(xlsxFile);
@@ -161,7 +161,7 @@ File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitat
 	
 	public static void Dependency_TC_Passed() throws Exception {
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);
@@ -202,7 +202,7 @@ File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitat
 			}
 	public static void Update_GLDT_CaseId() throws Exception {
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\reinvitationnosubjecttuemay1020224pm5pmi\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);
