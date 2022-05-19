@@ -5,7 +5,7 @@ public class ExcelUtilsaba {
 	
 	
 	public static void main(String[] args) {
-		// Parameterized  data passing to ExcelUtilsab.java in that construct will pick  ..
+		// Parameterized  data passing to ExcelUtilsab.java in that construct will pick . ..
 		String projectpath = System.getProperty("user.dir");
 		ExcelUtilsab excel = new ExcelUtilsab(projectpath+"\\excel\\data.xlsx", "Sheet1");
 		
