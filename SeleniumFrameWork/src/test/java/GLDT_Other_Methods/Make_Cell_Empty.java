@@ -17,7 +17,7 @@ public class Make_Cell_Empty {
 	public static void Delete_Cell_Contents() throws Exception {
 	
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File("G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx");        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);
@@ -26,8 +26,9 @@ public class Make_Cell_Empty {
 		            Workbook workbook = WorkbookFactory.create(inputStream);
 		 
 		            //Reading first sheet of excel file
-		            Sheet sheet = workbook.getSheetAt(1);
-		            
+		            Sheet sheet = workbook.getSheetAt(1);// Based on index ..0,1,2...
+		          //Sheet sheet = workbook.getSheet("GLDT_Test_Cases"); //Based on sheet name
+		           
 		            
 		            for (int Clear_row = 1, Clear_cell = 10; Clear_cell <= 12; Clear_row++ ) {		         
 		            	sheet.getRow(Clear_row).getCell(Clear_cell).setCellValue("");

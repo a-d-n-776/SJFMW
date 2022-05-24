@@ -47,7 +47,7 @@ public class GLDT_TestCase_Steps {
 			initiate.click();
 			//WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/span/button/img"));
 			WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[1]/div/div/div/div[2]/span/button/img"));
-			//gldt.click();
+			gldt.click();
 			row = 5;
 			cell_case_id = 10;
 			cell_actual_result = 10;
@@ -62,7 +62,9 @@ public class GLDT_TestCase_Steps {
 //			driver.switchTo().frame("PegaGadget1Ifr");
 			driver.switchTo().frame(1);
 	    	Case_Id = driver.findElement(By.xpath("//span[contains(text(),'(GLDT-')]")).getText();
+	    	Thread.sleep(3000);
 	    	Case_Id = Case_Id.substring(Case_Id.lastIndexOf("G")); //Removal of text from left side
+	    	Thread.sleep(3000);
 	    	StringBuffer sb= new StringBuffer(Case_Id);
 	    	sb.deleteCharAt(sb.length()-1); //Removal of text from right side
 	    	Case_Id = sb.toString();
@@ -74,7 +76,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx"));
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            //Enter the path to your excel here
 
@@ -151,7 +153,8 @@ public class GLDT_TestCase_Steps {
 	        driver.switchTo().frame(FrameSRC);
 	    	WebElement initiate = driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamically
 	    	initiate.click();
-	    	WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/span/button/img"));
+	    	//WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/span/button/img"));
+	    	WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[1]/div/div/div/div[2]/span/button/img"));
 	    	gldt.click();
 			row = 13;
 			cell_case_id = 10;
@@ -175,7 +178,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            
 	            //Enter the path to your excel here
@@ -256,7 +259,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 
@@ -350,7 +353,7 @@ public class GLDT_TestCase_Steps {
 		                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); //Enter the path to your excel here
 		        
 				FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 		        // Create workbook instance referencing the file created above
 		        XSSFWorkbook workbook = new XSSFWorkbook(fStream);
 
@@ -467,7 +470,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 
@@ -541,7 +544,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            //Enter the path to your excel here
 

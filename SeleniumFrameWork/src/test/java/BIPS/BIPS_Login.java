@@ -34,18 +34,22 @@ public class BIPS_Login {
         String baseUrl = "https://biphrm-biplah-stg1.pegacloud.io/prweb/app/default/c5mb0Z99oLKgPL-hk4L4rty7OLzbbezr*/!STANDARD";
         driver.get(baseUrl);
         driver.manage().window().maximize();
+        //driver.manage().window().minimize();
+        //driver.manage().window().maximize();
         try { 
             //FileInputStream fStream = new FileInputStream(new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
             
             FileInputStream fStream = new FileInputStream(new File(
-                    "C:\\Users\\cnbna\\Desktop\\BIPS Application\\app\\GLDT-TestCases-for-Automation.xlsx"));
+                    "G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
             //Enter the path to your excel here
 
             // Create workbook instance referencing the file created above
             XSSFWorkbook workbook = new XSSFWorkbook(fStream);
 
             // Get your first or desired sheet from the workbook
-            XSSFSheet sheet = workbook.getSheetAt(0); // getting first sheet
+           XSSFSheet sheet = workbook.getSheetAt(0); // getting first sheet Based on index([0,1,...]
+            //XSSFSheet sheet = workbook.getSheet("Master_Test_Data"); //Based on sheet name
+            
 
             XSSFRow row1 = sheet.getRow(1);
             XSSFCell cell1 = row1.getCell(2);
@@ -74,9 +78,14 @@ public class BIPS_Login {
 			GLDT_TestCase_Steps.cell_actual_result = 10;
 			GLDT_TestCase_Steps.cell_Status = 11;
 			GLDT_TestCase_Steps.cell_Jira_Id = 12;
+			
 			Execution_Result.Dependency_TC_Passed();
+			
 			ScreenCapture.main(null);
+			
+			
 			Jira_Ticket.CreateJiraTicket();
+			
 			Execution_Result.Fill_Fail_Result();
 			Execution_Result.Dependency_TC_Failed();
 //			softAssert.assertAll();
