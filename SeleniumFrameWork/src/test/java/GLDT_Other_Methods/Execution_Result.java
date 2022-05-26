@@ -33,8 +33,10 @@ File xlsxFile = new File("G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"
             Sheet sheet = workbook.getSheetAt(1);
             
             sheet.getRow(GLDT_TestCase_Steps.row).getCell(GLDT_TestCase_Steps.cell_actual_result).setCellValue("As expected");
-//          sheet.getRow(GLDT_TestCase_Steps.row).getCell(GLDT_TestCase_Steps.cell_Status).setCellValue("");
+
             sheet.getRow(GLDT_TestCase_Steps.row).getCell(GLDT_TestCase_Steps.cell_Status).setCellValue("Pass");
+            
+//          sheet.getRow(GLDT_TestCase_Steps.row).getCell(GLDT_TestCase_Steps.cell_Status).setCellValue("");
             //Close input stream
             inputStream.close();
  

@@ -32,7 +32,7 @@ public class Make_Cell_Empty {
 		            
 		            for (int Clear_row = 1, Clear_cell = 10; Clear_cell <= 12; Clear_row++ ) {		         
 		            	sheet.getRow(Clear_row).getCell(Clear_cell).setCellValue("");
-		            	if (Clear_row == 41) {
+		            	if (Clear_row == 62) {
 		            		Clear_row = 0;
 		            		Clear_cell++;
 		            	}		            		

@@ -23,6 +23,7 @@ import GLDT_Other_Methods.Execution_Result;
 
 
 
+
 public class GLDT_TC_2 {
 
 
@@ -30,8 +31,8 @@ public class GLDT_TC_2 {
 	private static WebDriver driver = null;
 	public static void main(String[] args) throws Exception {
 
+	//Select Temporary produtcs check box.Initiate a GLDT case.
 
-// Initiate GLDT case and Complete RA process.
 		
 		String projectPath = System.getProperty("user.dir");
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/chromedriver/chromedriver.exe");

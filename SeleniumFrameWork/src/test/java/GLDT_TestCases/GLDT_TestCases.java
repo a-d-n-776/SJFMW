@@ -50,7 +50,20 @@ public class GLDT_TestCases {
 	public static void GLDT_TC_06() throws Exception {
     GLDT_TestCase_Steps.Open_And_Close_PendingChildCaseProcessing_gldt();
 	}
-
+	//@Test (priority=7)
+	public static void GLDT_ProductsCheckBox_TC_07() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 //	@AfterClass
 //	public void Test() throws Exception {
 //		ExcelReportGenerator.main(null);
