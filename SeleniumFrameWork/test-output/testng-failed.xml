@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GLDT_TestCases.GLDT_TestCases">
+      <class name="demo.TestNGRetryFailedDemo">
         <methods>
-          <include name="Make_Cell_Empty"/>
-          <include name="Tama_User_Login"/>
-          <include name="GLDT_TC_04"/>
+          <include name="test3"/>
         </methods>
-      </class> <!-- GLDT_TestCases.GLDT_TestCases -->
+      </class> <!-- demo.TestNGRetryFailedDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

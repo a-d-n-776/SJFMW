@@ -34,9 +34,9 @@ public class GLDT_TestCase_Steps {
    public static String Case_Id;
    public static String nameofCurrMethod;
    public static String summary;
-
-	    public static WebDriver driver;
-	    public static void initiate_gldt() throws Exception {
+   public static WebDriver driver;
+	    
+   public static void initiate_gldt() throws Exception {
 	        String Product = null;
 	        String Reason = null;
 	        SoftAssert softAssert = new SoftAssert();

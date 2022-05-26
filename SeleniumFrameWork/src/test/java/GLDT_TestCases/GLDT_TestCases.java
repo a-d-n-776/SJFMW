@@ -19,7 +19,7 @@ public class GLDT_TestCases {
 	
 	}
 	
-	//@Test (priority=1)
+	@Test (priority=1)
 	public static void GLDT_TC_01() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldt();
 	}

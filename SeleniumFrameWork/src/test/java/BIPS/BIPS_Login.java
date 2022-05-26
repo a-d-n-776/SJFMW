@@ -93,6 +93,7 @@ public class BIPS_Login {
 			Execution_Result.Dependency_TC_Passed();
 //			System.out.println(e);
 			System.out.println("Login passed");
+			System.out.println("Login passed @BIPS_Login.java@TAMA_User_Login()");
 		}   
     }
 	public static void main(String[] args) throws Exception {
