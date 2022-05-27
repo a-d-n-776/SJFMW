@@ -2,23 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-26T20:46:55 IST" name="Default suite" finished-at="2022-05-26T20:47:51 IST" duration-ms="55912">
+  <suite started-at="2022-05-27T17:23:37 IST" name="Default suite" finished-at="2022-05-27T17:24:47 IST" duration-ms="69889">
     <groups>
     </groups>
-    <test started-at="2022-05-26T20:46:55 IST" name="Default test" finished-at="2022-05-26T20:47:51 IST" duration-ms="55912">
+    <test started-at="2022-05-27T17:23:37 IST" name="Default test" finished-at="2022-05-27T17:24:47 IST" duration-ms="69889">
       <class name="GLDT_TestCases.GLDT_TestCases">
-        <test-method is-config="true" signature="Make_Cell_Empty()[pri:0, instance:GLDT_TestCases.GLDT_TestCases@222545dc]" started-at="2022-05-26T20:46:55 IST" name="Make_Cell_Empty" finished-at="2022-05-26T20:46:58 IST" duration-ms="2765" status="PASS">
+        <test-method is-config="true" signature="Make_Cell_Empty()[pri:0, instance:GLDT_TestCases.GLDT_TestCases@16293aa2]" started-at="2022-05-27T17:23:37 IST" name="Make_Cell_Empty" finished-at="2022-05-27T17:23:39 IST" duration-ms="2580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Make_Cell_Empty -->
-        <test-method is-config="true" signature="Tama_User_Login()[pri:0, instance:GLDT_TestCases.GLDT_TestCases@222545dc]" started-at="2022-05-26T20:46:58 IST" name="Tama_User_Login" finished-at="2022-05-26T20:47:18 IST" duration-ms="20273" status="PASS">
+        <test-method is-config="true" signature="Tama_User_Login()[pri:0, instance:GLDT_TestCases.GLDT_TestCases@16293aa2]" started-at="2022-05-27T17:23:39 IST" name="Tama_User_Login" finished-at="2022-05-27T17:24:01 IST" duration-ms="22024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Tama_User_Login -->
-        <test-method signature="GLDT_TC_01()[pri:1, instance:GLDT_TestCases.GLDT_TestCases@222545dc]" started-at="2022-05-26T20:47:18 IST" name="GLDT_TC_01" finished-at="2022-05-26T20:47:51 IST" duration-ms="32814" status="PASS">
+        <test-method signature="GLDT_TC_09()[pri:9, instance:GLDT_TestCases.GLDT_TestCases@16293aa2]" started-at="2022-05-27T17:24:01 IST" name="GLDT_TC_09" finished-at="2022-05-27T17:24:47 IST" duration-ms="45232" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GLDT_TC_01 -->
+        </test-method> <!-- GLDT_TC_09 -->
       </class> <!-- GLDT_TestCases.GLDT_TestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

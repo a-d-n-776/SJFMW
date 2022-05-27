@@ -7,7 +7,7 @@
         <methods>
           <include name="Make_Cell_Empty"/>
           <include name="Tama_User_Login"/>
-          <include name="GLDT_ProductsCheckBox_TC_07"/>
+          <include name="GLDT_TC_09"/>
         </methods>
       </class> <!-- GLDT_TestCases.GLDT_TestCases -->
     </classes>

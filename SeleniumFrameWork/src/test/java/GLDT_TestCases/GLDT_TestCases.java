@@ -19,7 +19,7 @@ public class GLDT_TestCases {
 	
 	}
 	
-	@Test (priority=1)
+	//@Test (priority=1)
 	public static void GLDT_TC_01() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldt();
 	}
@@ -51,11 +51,19 @@ public class GLDT_TestCases {
     GLDT_TestCase_Steps.Open_And_Close_PendingChildCaseProcessing_gldt();
 	}
 	//@Test (priority=7)
-	public static void GLDT_ProductsCheckBox_TC_07() throws Exception {
+	public static void GLDT_TC_07() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox();
 	}
+	//@Test (priority=8)
+	public static void GLDT_TC_08() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox_And_RAprocess();
+		
+	}
 	
-	
+	@Test (priority=9)
+	public static void GLDT_TC_09() throws Exception {
+	    GLDT_TestCase_Steps.CompleteRAprocess_For_Open_Case_GLDT_ProductsCheckBox();
+	}
 	
 	
 	
