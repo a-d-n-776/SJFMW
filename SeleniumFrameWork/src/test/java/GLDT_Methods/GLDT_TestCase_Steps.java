@@ -1017,14 +1017,14 @@ public class GLDT_TestCase_Steps {
 			WebElement countryNigeria = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
 	    	countryNigeria.click();	
 
-	    	if(countryNigeria.isSelected()) {
-	    		System.out.println("Country is alredy selected");
-	    	}
+	    	//if(countryNigeria.isSelected()) {
+	    		//System.out.println("Country is alredy selected");
+	    	//}
 	    	
-	    	else {
-	    		countryNigeria.click();	
-	    		System.out.println("Country is not selected ");
-	    	}
+	    	//else {
+	    		//countryNigeria.click();	
+	    		//System.out.println("Country is not selected ,Now selected ");
+	    	//}
 	    	
 	    	           //India
 			//WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
@@ -1041,10 +1041,10 @@ public class GLDT_TestCase_Steps {
 	    	Execution_Result.Fill_Execution_Result();
 	    	
 	    	
-	    	WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-	    	continue1.click();
-	    	row++;
-	    	Execution_Result.Fill_Execution_Result();
+	    	//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
+	    	//continue1.click();
+	    	//row++;
+	    	//Execution_Result.Fill_Execution_Result();
 	    	
 	    	driver.manage().deleteAllCookies();
 	    	Thread.sleep(15000); //wait 15 seconds to clear cookies.

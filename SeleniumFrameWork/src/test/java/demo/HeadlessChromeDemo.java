@@ -14,11 +14,11 @@ public class HeadlessChromeDemo {
 	
 	public static void test() {
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\Desktop\\Projects\\Selenium\\SeleniumJavaFramework\\drivers\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\cnbna\\git\\SJFMW\\SeleniumFrameWork\\drivers\\chromedriver\\chromedriver.exe");
 		
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-		options.addArguments("window-size=1280,800");
+		//options.addArguments("--headless");
+		//options.addArguments("window-size=1280,800");
 		
 		WebDriver driver = new ChromeDriver(options);
 		

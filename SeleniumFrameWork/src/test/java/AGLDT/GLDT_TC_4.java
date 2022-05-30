@@ -41,19 +41,11 @@ public class GLDT_TC_4 {
 				);
 		driver.manage().window().maximize();
 		driver.findElement(By.id("txtUserID")).sendKeys("DK_TAMAManager");
-		driver.findElement(By.id("txtPassword")).sendKeys(" Rules#137");
+		driver.findElement(By.id("txtPassword")).sendKeys(" Rules#138");
 		//driver.findElement(By.id("sub")).sendKeys(Keys.RETURN);
 		driver.findElement(By.id("sub")).click();
 
-		//WebElement FrameSRC=driver.findElement(By.xpath("//iframe[@src='about:blank']"));
-		//driver.switchTo().frame(FrameSRC);
-		//Thread.sleep(3000);
-		//WebElement initiate = driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamically
-		//initiate.click();
-		//WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/span/button/img"));
 		
-		//WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[1]/div/div/div/div[2]/span/button/img"));
-		//gldt.click();
 		
 		
 		driver.switchTo().frame(0);
@@ -63,47 +55,11 @@ public class GLDT_TC_4 {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(1);
 
-		//for  un-check mark//
-		//WebElement ProductisundefinedUncheck = driver.findElement(By.xpath("//label[@for='e2457cfb']"));
-		//WebElement ProductisundefinedUncheck = driver.findElement(By.xpath("//*[@id=\"e2457cfb\"]"));
-		//ProductisundefinedUncheck.click();
-		
-		Thread.sleep(5000);
-		
-		
-		//WebElement selectproduct = driver.findElement(By.xpath("//input[@id='414e17ce']"));
-		//selectproduct.clear();
-		//selectproduct.sendKeys(Product);
-		//selectproduct.sendKeys("MONIS");
-		//selectproduct.sendKeys(Keys.DOWN);
-		//selectproduct.sendKeys(Keys.RETURN);
-
-		//String Reason = "Test Reason";
-		//WebElement reason = driver.findElement(By.xpath("//*[@id=\"158b841d\"]"));
-		//reason.clear();
-		//reason.sendKeys(Reason);
-		
-		//for check mark//
-		//WebElement Productisundefined = driver.findElement(By.xpath("//label[@for='e2457cfb']"));
-		//Productisundefined.click();
-		
-		Thread.sleep(5000);
-		
-
-
-		WebElement TemporaryProductName = driver.findElement(By.xpath("//input[@id='7515729c']"));
-		TemporaryProductName.click();
-		
-		Thread.sleep(5000);
-		
-		WebElement Search = driver.findElement(By.xpath("//input[@id='anypicker-input']"));
-		//Search.clear();
-		Search.sendKeys("Temp_Proj_10");
-		Search.sendKeys(Keys.DOWN);
-		Search.sendKeys(Keys.ENTER);
-		Thread.sleep(5000);
-		
-	
+		WebElement reason = driver.findElement(By.xpath("//*[@id=\"158b841d\"]"));
+    	reason.clear();
+    	Thread.sleep(5000);
+    	reason.sendKeys("Test Reason");
+    	Thread.sleep(5000);
 		
 		
 		WebElement region = driver.findElement(By.xpath("//button[contains(text(),'EM')]"));
@@ -126,8 +82,8 @@ public class GLDT_TC_4 {
 		WebElement InitiateRAProcess = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div[2]/div[3]/span/button"));
     	InitiateRAProcess.click();
     	Thread.sleep(3000);
-    	WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-    	continue1.click();
+    	//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
+    	//continue1.click();
 
 		driver.manage().deleteAllCookies();
 
@@ -154,4 +110,3 @@ public class GLDT_TC_4 {
 	// calling flush writes everything to the log file
 	//extent.flush();
 }
-

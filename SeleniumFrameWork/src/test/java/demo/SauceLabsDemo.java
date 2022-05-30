@@ -15,26 +15,26 @@ public class SauceLabsDemo {
 
 	public static void main(String[] args) throws Exception {
 
-		DesiredCapabilities caps = DesiredCapabilities.chrome();
-		caps.setCapability("platform", "Linux");
-		caps.setCapability("version", "latest");
-		caps.setCapability("name", "GoogleTest1");
-		caps.setCapability("extendedDebugging", "true");
-		caps.setCapability("buildNumber", "3.0");
+	//	DesiredCapabilities caps = DesiredCapabilities.chrome();
+		//caps.setCapability("platform", "Linux");
+		//caps.setCapability("version", "latest");
+		//caps.setCapability("name", "GoogleTest1");
+		//caps.setCapability("extendedDebugging", "true");
+		//caps.setCapability("buildNumber", "3.0");
 
-		WebDriver driver = new RemoteWebDriver(new java.net.URL(URL), caps);
+		//WebDriver driver = new RemoteWebDriver(new java.net.URL(URL), caps);
 
 //		String projectPath = System.getProperty("user.dir");
 //		System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\chromedriver\\chromedriver.exe");
 //		WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://google.com");
-		System.out.println(driver.getTitle());
-		driver.findElement(By.name("q")).sendKeys("Automation Step by Step");
-		driver.findElement(By.name("btnK")).sendKeys(Keys.RETURN);
-		System.out.println(driver.getTitle());
+	//	driver.get("https://google.com");
+		//System.out.println(driver.getTitle());
+		//driver.findElement(By.name("q")).sendKeys("Automation Step by Step");
+		//driver.findElement(By.name("btnK")).sendKeys(Keys.RETURN);
+		//System.out.println(driver.getTitle());
 		
-		driver.quit();
+		//driver.quit();
 		System.out.println("Test Completed");
 	}
 
