@@ -24,6 +24,8 @@ import BIPS.BIPS_Login;
 import GLDT_Methods.GLDT_TestCase_Steps;
 
 public class Jira_Ticket {
+	public static String xlfilepath = BIPS_Login.xlfilepath;
+	
 	//Method to create a Jira ticket and update the Jira_Id in excel sheet
 	public static void CreateJiraTicket() throws Exception {
 //		System.setProperty("webdriver.edge.driver", "C:\\msedgedriver.exe");
@@ -42,7 +44,7 @@ public class Jira_Ticket {
                    // "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
             
             FileInputStream fStream = new FileInputStream(new File(
-            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
+            		xlfilepath));
             
             //Enter the path to your excel here
 
@@ -94,7 +96,7 @@ public class Jira_Ticket {
 		System.out.println(Jira_Id);
 		
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx");
+		File xlsxFile = new File(xlfilepath);
 		
         try {
             //Creating input stream

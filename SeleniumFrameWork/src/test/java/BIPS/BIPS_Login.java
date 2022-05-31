@@ -24,9 +24,21 @@ import GLDT_Other_Methods.ScreenCapture;
 public class BIPS_Login {
 	static SoftAssert softAssert = new SoftAssert();
 	public static WebDriver driver;
+	public static String xlfilepath = "G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx";
+	
+	
+	public static void main(String[] args) throws Exception {
+		BIPS_Login.TAMA_User_Login();
+	}	
+
+
+	
+	
 	public static void TAMA_User_Login() throws Exception {
 		String userid = null;
 	    String password = null;
+	    //String xlfilepath = "G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx";
+	    
 		//System.setProperty("webdriver.chrome.driver","C:\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\cnbna\\git\\SJFMW\\SeleniumFrameWork\\drivers\\chromedriver\\chromedriver.exe");
 		driver = new ChromeDriver();    
@@ -39,8 +51,7 @@ public class BIPS_Login {
         try { 
             //FileInputStream fStream = new FileInputStream(new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
             
-            FileInputStream fStream = new FileInputStream(new File(
-                    "G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
+            FileInputStream fStream = new FileInputStream(new File(xlfilepath));
             //Enter the path to your excel here
 
             // Create workbook instance referencing the file created above
@@ -95,8 +106,6 @@ public class BIPS_Login {
 			System.out.println("Login passed");
 			System.out.println("Login passed @BIPS_Login.java@TAMA_User_Login()");
 		}   
-    }
-	public static void main(String[] args) throws Exception {
-		BIPS_Login.TAMA_User_Login();
-	}	
+	}
 }
+	

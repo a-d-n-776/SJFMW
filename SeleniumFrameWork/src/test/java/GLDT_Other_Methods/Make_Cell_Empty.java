@@ -10,14 +10,18 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
+import BIPS.BIPS_Login;
+
 public class Make_Cell_Empty {
+	public static String xlfilepath = BIPS_Login.xlfilepath;
+	
 //	public static int Clear_row;
 //	public static int Clear_cell = 8;
 	
 	public static void Delete_Cell_Contents() throws Exception {
 	
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
-		File xlsxFile = new File("G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx");        
+		File xlsxFile = new File(xlfilepath);        
 		        try {
 		            //Creating input stream
 		            FileInputStream inputStream = new FileInputStream(xlsxFile);

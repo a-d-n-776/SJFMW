@@ -23,7 +23,7 @@ import BIPS.BIPS_Login;
 import GLDT_Other_Methods.Execution_Result;
 import GLDT_Other_Methods.Jira_Ticket;
 import GLDT_Other_Methods.ScreenCapture;
-//import junit.framework.AssertionFailedError;
+import junit.framework.AssertionFailedError;
 
 public class GLDT_TestCase_Steps {
    public static int row;
@@ -35,6 +35,8 @@ public class GLDT_TestCase_Steps {
    public static String nameofCurrMethod;
    public static String summary;
    public static WebDriver driver;
+  
+   public static String xlfilepath = BIPS_Login.xlfilepath;
 	    
    public static void initiate_gldt() throws Exception {
 	        String Product = null;
@@ -76,7 +78,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
+	            		xlfilepath));
 	            
 	            //Enter the path to your excel here
 
@@ -178,7 +180,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		xlfilepath)); 
 	            
 	            
 	            //Enter the path to your excel here
@@ -259,7 +261,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		xlfilepath)); 
 	            
 	            //Enter the path to your excel here
 
@@ -355,7 +357,7 @@ public class GLDT_TestCase_Steps {
 		                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); //Enter the path to your excel here
 		        
 				FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		xlfilepath)); 
 		        // Create workbook instance referencing the file created above
 		        XSSFWorkbook workbook = new XSSFWorkbook(fStream);
 
@@ -473,7 +475,7 @@ public class GLDT_TestCase_Steps {
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		xlfilepath)); 
 	            
 	            //Enter the path to your excel here
 
@@ -547,7 +549,7 @@ public class GLDT_TestCase_Steps {
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
 	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            		xlfilepath)); 
 	            
 	            //Enter the path to your excel here
 
@@ -589,12 +591,15 @@ public class GLDT_TestCase_Steps {
 	    }
 
 	    //////////////////////gldtProductsCheckBox////////
+	    ///////////////////////////////////////////////////
+	    ////////////////////////////////////////////////////
 	    
 		public static void initiate_gldtProductsCheckBox() throws Exception {
 		    String Product = null;
 		    String Reason = null;
 		    
 		   String TemporaryProductNameValue = null;
+
 		   
 		    SoftAssert softAssert = new SoftAssert();
 			WebDriver driver = BIPS_Login.driver;
@@ -631,9 +636,10 @@ public class GLDT_TestCase_Steps {
 			try {
 		        //FileInputStream fStream = new FileInputStream(new File(
 		                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
-		        
-		        FileInputStream fStream = new FileInputStream(new File(
-		        		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
+				
+				
+				
+		        FileInputStream fStream = new FileInputStream(new File(xlfilepath));
 		        
 		        //Enter the path to your excel here
 
@@ -676,7 +682,7 @@ public class GLDT_TestCase_Steps {
 			row++;
 			Execution_Result.Fill_Execution_Result();
 			
-			/////////////////////////////////////
+			//////////////////////////////////////
 			// Check Mark selection 
 			WebElement Productisundefined = driver.findElement(By.xpath("//label[@for='e2457cfb']"));
 			Productisundefined.click();
@@ -777,8 +783,7 @@ public class GLDT_TestCase_Steps {
 		        //FileInputStream fStream = new FileInputStream(new File(
 		                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 		        
-		        FileInputStream fStream = new FileInputStream(new File(
-		        		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx"));
+		        FileInputStream fStream = new FileInputStream(new File(xlfilepath));
 		        
 		        //Enter the path to your excel here
 
@@ -923,8 +928,7 @@ public class GLDT_TestCase_Steps {
 	            //FileInputStream fStream = new FileInputStream(new File(
 	              //      "C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx"));
 	            
-	            FileInputStream fStream = new FileInputStream(new File(
-	            		"G:\\My Drive\\app\\GLDT-TestCases-for-Automation.xlsx")); 
+	            FileInputStream fStream = new FileInputStream(new File(xlfilepath)); 
 	            
 	            //Enter the path to your excel here
 
@@ -1083,11 +1087,11 @@ public class GLDT_TestCase_Steps {
 	    	Execution_Result.Fill_Execution_Result();
 	    	
 	    	
-	    	WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-	    	continue1.click();
+	    	//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
+	    	//continue1.click();
 	    	
-	    	row++;
-	    	Execution_Result.Fill_Execution_Result();
+	    	//row++;
+	    	//Execution_Result.Fill_Execution_Result();
 	    	
 	    	driver.manage().deleteAllCookies();
 	    	Thread.sleep(15000); //wait 15 seconds to clear cookies.

@@ -54,7 +54,7 @@ public class GLDT_TestCases {
 	
 	////////////////////////
 	
-	//@Test (priority=7)
+	@Test (priority=7)
 	public static void GLDT_TC_07() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox();
 	}
@@ -64,7 +64,7 @@ public class GLDT_TestCases {
 		
 	}
 	
-	//@Test (priority=9)
+	@Test (priority=9)
 	public static void GLDT_TC_09() throws Exception {
 	    GLDT_TestCase_Steps.CompleteRAprocess_For_Open_Case_GLDT_ProductsCheckBox();
 	}
