@@ -740,6 +740,7 @@ public class GLDT_TestCase_Steps {
 		    String Reason = null;
 		    String TemporaryProductNameValue = null;
 		   
+		    
 		    SoftAssert softAssert = new SoftAssert();
 			WebDriver driver = BIPS_Login.driver;
 			WebElement FrameSRC=driver.findElement(By.xpath("//iframe[@src='about:blank']"));
@@ -824,6 +825,9 @@ public class GLDT_TestCase_Steps {
 			// Check Mark selection 
 			WebElement Productisundefined = driver.findElement(By.xpath("//label[@for='e2457cfb']"));
 			Productisundefined.click();
+			row++;
+			Execution_Result.Fill_Execution_Result();
+			
 			Thread.sleep(5000);
 			//Selecting search box
 			WebElement TemporaryProductName = driver.findElement(By.xpath("//input[@id='7515729c']"));
@@ -845,6 +849,7 @@ public class GLDT_TestCase_Steps {
 //			softAssert.assertTrue(region.isDisplayed());
 			row++;
 			Execution_Result.Fill_Execution_Result();
+			
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			WebElement ropu = driver.findElement(By.xpath("//button[text()='ROPU IMETA']"));
 			ropu.click();
@@ -859,27 +864,36 @@ public class GLDT_TestCase_Steps {
 //			softAssert.assertTrue(country.isDisplayed());
 			row++;
 			Execution_Result.Fill_Execution_Result();
-			WebElement close = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
-			close.click();
+			
+			///// close  ////
+			//WebElement close = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
+			//close.click();
 //			WebElement home_page = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
 //			softAssert.assertTrue(home_page.isDisplayed());
-			row++;
-			Execution_Result.Fill_Execution_Result();
+			//row++;
+			//Execution_Result.Fill_Execution_Result();
 			
 			//Press "Close" button. row update Actual data & Status/Pass or Fail 
 			//row++;
 			//Execution_Result.Fill_Execution_Result();
 			
 			//Initiate RA Process" button & Press Continue. row update Actual data & Status/Pass or Fail 
+
 			WebElement InitiateRAProcess = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div[2]/div[3]/span/button"));
 			InitiateRAProcess.click();
 			row++;
 			Execution_Result.Fill_Execution_Result();
+			
+
+		
+			
 			Thread.sleep(3000);
-			WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-			continue1.click();
-			row++;
-			Execution_Result.Fill_Execution_Result();
+			
+			//Popup window///
+			//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
+			//continue1.click();
+			//row++;
+			//Execution_Result.Fill_Execution_Result();
 			
 			
 			driver.manage().deleteAllCookies();
@@ -897,6 +911,8 @@ public class GLDT_TestCase_Steps {
 	    	String Product = null;
 	        String Reason = null;
 	        String TemporaryProductNameValue = null;
+	        String Comments = null;
+	        
 	        
 	        WebDriver driver = BIPS_Login.driver;
 //	    	driver.switchTo().frame("PegaGadget2Ifr");
@@ -927,13 +943,19 @@ public class GLDT_TestCase_Steps {
 	            XSSFRow row2 = sheet.getRow(65);
 	            XSSFCell cell3 = row2.getCell(8);
 	            
-	            XSSFRow row3 = sheet.getRow(67);
-	            XSSFCell cell4 = row3.getCell(8);
+	            //XSSFRow row3 = sheet.getRow(67);
+	            //XSSFCell cell4 = row3.getCell(8);
+	            
+	            XSSFRow row4 = sheet.getRow(67);
+	            XSSFCell cell5 = row4.getCell(8);
+	            
+	            
 	            
 	            CaseID = cell1.toString();
 	            Product = cell2.toString();
 	            Reason = cell3.toString();
-	            TemporaryProductNameValue = cell4.toString();
+	           // TemporaryProductNameValue = cell4.toString();
+	            Comments = cell5.toString();
 	            
 	            fStream.close();
 	        } catch (Exception e) {
@@ -959,10 +981,10 @@ public class GLDT_TestCase_Steps {
 	    	//row++;
 	    	//Execution_Result.Fill_Execution_Result();
 	    	
-	    	WebElement reason = driver.findElement(By.xpath("//*[@id=\"158b841d\"]"));
+	    	WebElement Reasonforcaseinitiation = driver.findElement(By.xpath("//*[@id=\"158b841d\"]")); 
 	    
-	    	reason.clear();
-	    	reason.sendKeys(Reason);
+	    	Reasonforcaseinitiation.clear();
+	    	Reasonforcaseinitiation.sendKeys("Test Reasonforcaseinitiation");
 	    	//row++;
 	    	
 	    	
@@ -1013,10 +1035,31 @@ public class GLDT_TestCase_Steps {
 	    	
 	    	WebDriverWait wait = new WebDriverWait(driver, 10);
 	    	
-	    				//Nigeria//
-			WebElement countryNigeria = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
-	    	countryNigeria.click();	
 
+			//India
+			WebElement countryI = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
+			countryI.click();
+	    	
+	    	//Nigeria
+			WebElement countryN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
+			countryN.click();
+			Thread.sleep(5000);
+
+			row++;
+	    	Execution_Result.Fill_Execution_Result();
+			
+			Thread.sleep(5000);
+			
+			
+			WebElement comment = driver.findElement(By.xpath("//*[@id=\"5e1978c7\"]"));
+			comment.click();
+			comment.sendKeys(Comments);
+
+			
+			row++;
+	    	Execution_Result.Fill_Execution_Result();
+	    	
+	    	
 	    	//if(countryNigeria.isSelected()) {
 	    		//System.out.println("Country is alredy selected");
 	    	//}
@@ -1032,8 +1075,7 @@ public class GLDT_TestCase_Steps {
 
 	    	
 	    	
-	    	row++;
-	    	Execution_Result.Fill_Execution_Result();
+	    	
 	    	
 	    	WebElement InitiateRAProcess = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div[2]/div[3]/span/button"));
 	    	InitiateRAProcess.click();
@@ -1041,10 +1083,11 @@ public class GLDT_TestCase_Steps {
 	    	Execution_Result.Fill_Execution_Result();
 	    	
 	    	
-	    	//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
-	    	//continue1.click();
-	    	//row++;
-	    	//Execution_Result.Fill_Execution_Result();
+	    	WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
+	    	continue1.click();
+	    	
+	    	row++;
+	    	Execution_Result.Fill_Execution_Result();
 	    	
 	    	driver.manage().deleteAllCookies();
 	    	Thread.sleep(15000); //wait 15 seconds to clear cookies.
@@ -1057,7 +1100,11 @@ public class GLDT_TestCase_Steps {
 			
 		}
 	    
-		
+		public static void Open_And_Close_PendingChildCaseProcessing_gldt_ProductsCheckBox() throws Exception{
+			
+			
+			
+		}
 		
 		
 		

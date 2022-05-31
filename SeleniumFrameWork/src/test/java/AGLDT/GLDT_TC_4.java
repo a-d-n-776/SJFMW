@@ -50,16 +50,16 @@ public class GLDT_TC_4 {
 		
 		driver.switchTo().frame(0);
 		
-		String CaseID = "GLDT-3626";
+		String CaseID = "GLDT-3628";
 		driver.findElement(By.linkText(CaseID)).click();
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(1);
 
 		WebElement reason = driver.findElement(By.xpath("//*[@id=\"158b841d\"]"));
     	reason.clear();
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     	reason.sendKeys("Test Reason");
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
 		
 		
 		WebElement region = driver.findElement(By.xpath("//button[contains(text(),'EM')]"));
@@ -71,17 +71,29 @@ public class GLDT_TC_4 {
 
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		//Nigeria
-		WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
+		WebElement countryN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[19]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
+		countryN.click();
+		Thread.sleep(5000);
 		//India
-		//WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
+		WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//body/div[@id='PEGA_HARNESS']/form[1]/div[3]/div[1]/section[1]/div[1]/span[2]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[7]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[7]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/span[1]/i[1]/img[1]")));
 		country.click();
 		
+		Thread.sleep(5000);
+		
+		
+		WebElement comment = driver.findElement(By.xpath("//*[@id=\"5e1978c7\"]"));
+		comment.click();
+		comment.sendKeys("Testing");
+		
+		
+		Thread.sleep(5000);
 		//WebElement close = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
 		//close.click();
 
 		WebElement InitiateRAProcess = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div[2]/div[3]/span/button"));
     	InitiateRAProcess.click();
     	Thread.sleep(3000);
+    	
     	//WebElement continue1 = driver.findElement(By.xpath("//button[contains(text(),'Continue')]"));
     	//continue1.click();
 
