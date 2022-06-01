@@ -1115,7 +1115,8 @@ public class GLDT_TestCase_Steps {
 		
 		
 		
-		//Latest one//
+		////// Try to change the frame work ////
+		
 		
 		
 		
@@ -1145,27 +1146,199 @@ public static void initiate_gldtProductsCheckBox3()throws Exception {
 	BIPS_Home.Open_And_Close_PendingChildCaseProcessing_gldt_ProductsCheckBox();
 }
 			
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		//////////////////////////////////////
 		
 		
+public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception {	
+	
+	
+	String SelectProduct = null; //ACARDI
+	String SelectTemporaryProduct = null; //Temp_Proj_1 , DK_Temp_Prod-21-09
+	String SelectCountrie = null; //India
+	String MultiSelectDateType = null; //Submission Date
+	//String TimelineType = null; //Best
+
+
+   
+    SoftAssert softAssert = new SoftAssert();
+	WebDriver driver = BIPS_Login.driver;
+	WebElement FrameSRC=driver.findElement(By.xpath("//iframe[@src='about:blank']"));
+    driver.switchTo().frame(FrameSRC);
+    
+    
+	//WebElement initiate = driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamically
+	//initiate.click();
+	
+	
+	WebElement acess = driver.findElement(By.xpath("/html/body/div[3]/form/div[3]/div/section/div/div[1]/div/div/div/div/span/div/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/span/div/div/div/div/div/div/div[7]/div[1]"));
+    acess.click();
+    WebElement Gldt=driver.findElement(By.xpath(" //*[@id=\"RULE_KEY\"]/div/div/div/div[2]/div/div/div/div/div[2]/span/button"));
+    Gldt.click();
+    
+	row = 73; // Variable for Case_Id row
+	cell_case_id = 10;// Variable for Case_Id column
+	cell_actual_result = 10;
+	cell_Status = 11;
+	cell_Jira_Id = 12;
+	
+	Execution_Result.Fill_Execution_Result();
+	
+	driver.switchTo().defaultContent();
+	driver.switchTo().frame(1);
+	
+	try {
+        //FileInputStream fStream = new FileInputStream(new File(
+                //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 		
 		
+		
+        FileInputStream fStream = new FileInputStream(new File(xlfilepath));
+        
+        //Enter the path to your excel here
+
+        // Create workbook instance referencing the file created above
+        XSSFWorkbook workbook = new XSSFWorkbook(fStream);
+
+        // Get your first or desired sheet from the workbook
+        XSSFSheet sheet = workbook.getSheetAt(1); // getting second sheet
+
+        XSSFRow row = sheet.getRow(74);
+        XSSFCell cell1 = row.getCell(8);
+        
+        XSSFRow row1 = sheet.getRow(75);
+        XSSFCell cell2 = row1.getCell(8);
+        
+        XSSFRow row2 = sheet.getRow(76);
+        XSSFCell cell3 = row2.getCell(8);
+
+        XSSFRow row3 = sheet.getRow(77);
+        XSSFCell cell4 = row3.getCell(8);
+        
+        SelectProduct = cell1.toString();
+        SelectTemporaryProduct  = cell2.toString();
+        SelectCountrie = cell3.toString();
+        MultiSelectDateType = cell4.toString();
+    	
+        fStream.close();
+    } catch (Exception e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+	WebElement SelectProducts = driver.findElement(By.xpath("//div[@class='content-item content-field item-1 flex']//input[@id='6cbcb0a3']"));
+	SelectProducts.clear();
+	SelectProducts.sendKeys(SelectProduct);
+		Thread.sleep(1000);
+	//SelectProducts.sendKeys(Keys.DOWN);
+	SelectProducts.sendKeys(Keys.ENTER);
+//	softAssert.assertTrue(selectproduct.isDisplayed());
+	
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	/////////////////////////////////////////////
+	WebElement SelectTemporaryProducts = driver.findElement(By.xpath("//div[@class='content-item content-field item-2 flex']//input[@id='6cbcb0a3']"));
+	SelectTemporaryProducts.clear();
+	SelectTemporaryProducts.sendKeys(SelectTemporaryProduct);
+		Thread.sleep(1000);
+	//SelectTemporaryProducts.sendKeys(Keys.DOWN);
+	SelectTemporaryProducts.sendKeys(Keys.ENTER);
+	
+//	softAssert.assertTrue(reason.isDisplayed());
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	
+	///////////////////////////////////////
+
+	WebElement SelectCountries = driver.findElement(By.xpath("//input[@id='99d8a7ff']"));
+	SelectCountries.sendKeys(SelectCountrie);
+		Thread.sleep(1000);
+	//SelectCountries.sendKeys(Keys.DOWN);
+	SelectCountries.sendKeys(Keys.ENTER);
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	
+	//////////////////////////////////////////////////////////////////
+	WebElement MultiSelectDateTypes = driver.findElement(By.xpath("//input[@id='21b41389']"));
+	MultiSelectDateTypes.sendKeys(MultiSelectDateType);
+		Thread.sleep(1000);
+	//MultiSelectDateTypes.sendKeys(Keys.DOWN);
+	MultiSelectDateTypes.sendKeys(Keys.ENTER);
+	row++;
+	Execution_Result.Fill_Execution_Result();
+
+	//////////////////////////////////////////////////////////////
+	WebElement TimelineType = driver.findElement(By.xpath("//select[@id='eaa7b9ba']"));	
+	TimelineType.click();
+	TimelineType.sendKeys(Keys.DOWN);
+	TimelineType.sendKeys(Keys.DOWN);
+	TimelineType.sendKeys(Keys.ENTER);
+	
+	
+//	softAssert.assertTrue(region.isDisplayed());
+	row++;
+	Execution_Result.Fill_Execution_Result();
+
+	////////////////////////////////////////////////
+	row++;
+	row++;
+	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	WebElement ViewTimelines = driver.findElement(By.xpath("//div[@class='content-item content-field item-1 flex flex-row dataValueWrite']//span"));
+	ViewTimelines.click();
+//	softAssert.assertTrue(ropu.isDisplayed());
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	
+	//////////////////////////////////////////////////////////////////////
+	row++;
+	row++;
+	row++;
+	row++;
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement Export = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Click here to show all launch dates in a tabular format, which can be exported to Excel or PDF']")));
+	Export.click();
+//	softAssert.assertTrue(country.isDisplayed());
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	/////////////////////////////Press "Close" button.//////////////////////////
+	WebElement close = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
+	close.click();
+//	WebElement home_page = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
+//	softAssert.assertTrue(home_page.isDisplayed());
+	row++;
+	Execution_Result.Fill_Execution_Result();
+	//////////////////////////////////
+
+	
+	
+	driver.manage().deleteAllCookies();
+	try {
+	  Thread.sleep(15000); //wait 15 seconds to clear cookies.
+	} catch (InterruptedException e) {
+	  e.printStackTrace();
+	}
+	driver.quit();
+}
+	
+
+		
 	    
 	    
 	    
 	    
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
 public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
 
     //Convert web driver object to TakeScreenshot

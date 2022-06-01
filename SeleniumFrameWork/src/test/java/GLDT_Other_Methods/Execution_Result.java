@@ -167,7 +167,7 @@ File xlsxFile = new File(xlfilepath);
 	}
 	
 	public static void Dependency_TC_Passed() throws Exception {
-		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
+		//File xlsxFile = new File("C:\\Users\\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
 		File xlsxFile = new File(xlfilepath);        
 		        try {
 		            //Creating input stream
@@ -209,6 +209,62 @@ File xlsxFile = new File(xlfilepath);
 		            e.printStackTrace();
 		        }
 			}
+
+
+	public static void Dependency_TC2_Passed() throws Exception {
+		
+		
+		
+		
+		
+		//File xlsxFile = new File("C:\\Users\\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
+				File xlsxFile = new File(xlfilepath);        
+				        try {
+				            //Creating input stream
+				            FileInputStream inputStream = new FileInputStream(xlsxFile);
+				             
+				            //Creating workbook from input stream
+				            Workbook workbook = WorkbookFactory.create(inputStream);
+				 
+				            //Reading first sheet of excel file
+				            Sheet sheet = workbook.getSheetAt(1);
+				             
+//				            for (int row = 5, cell = 11; row <= 41; row++) {
+//				            	sheet.getRow(row).getCell(cell).setCellValue("");
+//				            }
+				            
+				            for (int row = 1, cell = 10; row <= 4; row++) {
+				            	sheet.getRow(row).getCell(cell).setCellValue("As expected");
+				            }
+				            for (int row = 1, cell = 11; row <= 4; row++) {
+				            	sheet.getRow(row).getCell(cell).setCellValue("Pass");
+				            }
+				            //Close input stream
+				            inputStream.close();
+				 
+				            //Crating output stream and writing the updated workbook
+				            FileOutputStream os = new FileOutputStream(xlsxFile);
+				            workbook.write(os);
+				             
+				            //Close the workbook and output stream
+				            workbook.close();
+				            os.close();
+				             
+				            System.out.println("Excel file has been updated successfully.");
+				            System.out.println("Excel file has been updated successfully@Execution_Results.java@Dependency_TC_Passed().");
+				            
+				             
+				        } catch (EncryptedDocumentException | IOException e) {
+				            System.err.println("Exception while updating an existing excel file.");
+				            e.printStackTrace();
+				        }
+		
+	}
+	
+	
+	
+	
+	
 	public static void Update_GLDT_CaseId() throws Exception {
 		//File xlsxFile = new File("C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx");
 		File xlsxFile = new File(xlfilepath);        

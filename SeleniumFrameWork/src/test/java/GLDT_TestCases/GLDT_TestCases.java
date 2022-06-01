@@ -54,7 +54,7 @@ public class GLDT_TestCases {
 	}
 
 	
-	////////////////////////
+	////////////////////////Started my work /////////
 	
 	//@Test (priority=7)
 	public static void GLDT_TC_07() throws Exception {
@@ -72,11 +72,11 @@ public class GLDT_TestCases {
 	}
 	
 	
-	//////
+	////// Try to change the frame work ////
 	
 	
 	
-	@Test (priority=10)
+	//@Test (priority=10)
 	public static void GLDT_TC_10() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox0();
 	}
@@ -95,7 +95,14 @@ public class GLDT_TestCases {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox3();
 	}
 	
+	///
 	
+	@Test (priority=14)
+	public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases_14() throws Exception {
+		 GLDT_TestCase_Steps.Access_GLDT_ViewGlobalTimelinesforGLDTcases();
+		
+	    
+	}
 	
 	
 	
