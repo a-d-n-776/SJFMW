@@ -6,8 +6,8 @@
       <class name="GLDT_TestCases.GLDT_TestCases">
         <methods>
           <include name="Make_Cell_Empty"/>
+          <include name="GLDT_TC_10"/>
           <include name="Tama_User_Login"/>
-          <include name="GLDT_TC_09"/>
         </methods>
       </class> <!-- GLDT_TestCases.GLDT_TestCases -->
     </classes>

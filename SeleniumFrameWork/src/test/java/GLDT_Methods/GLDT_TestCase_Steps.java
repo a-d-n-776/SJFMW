@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
+import BIPS.BIPS_Home;
+import BIPS.BIPS_Initiate;
 import BIPS.BIPS_Login;
 import GLDT_Other_Methods.Execution_Result;
 import GLDT_Other_Methods.Jira_Ticket;
@@ -77,8 +79,7 @@ public class GLDT_TestCase_Steps {
 	            //FileInputStream fStream = new FileInputStream(new File(
 	                    //"C:\\Users\\DC0121\\eclipse-workspace\\BIPS\\GLDT-TestCases-for-Automation.xlsx")); 
 	            
-	            FileInputStream fStream = new FileInputStream(new File(
-	            		xlfilepath));
+	            FileInputStream fStream = new FileInputStream(new File(xlfilepath));
 	            
 	            //Enter the path to your excel here
 
@@ -1109,7 +1110,54 @@ public class GLDT_TestCase_Steps {
 			
 			
 		}
+		////////////////////
+		///////////////////////////////////////////////
 		
+		
+		
+		//Latest one//
+		
+		
+		
+		
+		
+public static void initiate_gldtProductsCheckBox0()throws Exception {
+			
+			BIPS_Initiate.GLDT_Initiate_ProductsCheckBoxSelect();
+	
+		}
+
+public static void initiate_gldtProductsCheckBox1()throws Exception {
+
+			
+			
+			BIPS_Initiate.GLDT_Initiate_ProductsCheckBoxSelect_And_RAprocess();
+}
+
+public static void initiate_gldtProductsCheckBox2()throws Exception {
+
+	BIPS_Home.CompleteRAprocess_For_Open_Case_GLDT_ProductsCheckBox();;
+	
+}
+
+public static void initiate_gldtProductsCheckBox3()throws Exception {
+
+	BIPS_Home.Open_And_Close_PendingChildCaseProcessing_gldt_ProductsCheckBox();
+}
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//////////////////////////////////////
 		
 		
 		
@@ -1148,7 +1196,7 @@ public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws 
 public static void main(String[] args) throws Exception {
 	BIPS_Login.TAMA_User_Login();
 //	GLDT_TestCase_Steps.Open_And_Close_Open_case_gldt();
-	GLDT_TestCase_Steps.Verify_error_message();
+	GLDT_TestCase_Steps2.Verify_error_message();
 }
 
 

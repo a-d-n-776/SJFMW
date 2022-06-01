@@ -41,7 +41,7 @@ public class GLDT_TC_2 {
 				);
 		driver.manage().window().maximize();
 		driver.findElement(By.id("txtUserID")).sendKeys("DK_TAMAManager");
-		driver.findElement(By.id("txtPassword")).sendKeys(" Rules#137");
+		driver.findElement(By.id("txtPassword")).sendKeys(" Rules#138");
 		//driver.findElement(By.id("sub")).sendKeys(Keys.RETURN);
 		driver.findElement(By.id("sub")).click();
 

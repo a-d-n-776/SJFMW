@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import BIPS.BIPS_Login;
 import GLDT_Other_Methods.Make_Cell_Empty;
 import GLDT_Methods.GLDT_TestCase_Steps;
+
+
 public class GLDT_TestCases {
 	
 	@BeforeClass
@@ -54,20 +56,46 @@ public class GLDT_TestCases {
 	
 	////////////////////////
 	
-	@Test (priority=7)
+	//@Test (priority=7)
 	public static void GLDT_TC_07() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox();
 	}
-	@Test (priority=8)
+	//@Test (priority=8)
 	public static void GLDT_TC_08() throws Exception {
 	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox_And_RAprocess();
 		
 	}
 	
-	@Test (priority=9)
+	//@Test (priority=9)
 	public static void GLDT_TC_09() throws Exception {
 	    GLDT_TestCase_Steps.CompleteRAprocess_For_Open_Case_GLDT_ProductsCheckBox();
 	}
+	
+	
+	//////
+	
+	
+	
+	@Test (priority=10)
+	public static void GLDT_TC_10() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox0();
+	}
+	
+	//@Test (priority=11)
+	public static void GLDT_TC_11() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox1();
+	}
+	
+	//@Test (priority=12)
+	public static void GLDT_TC_12() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox2();
+	}
+	//@Test (priority=13)
+	public static void GLDT_TC_13() throws Exception {
+	    GLDT_TestCase_Steps.initiate_gldtProductsCheckBox3();
+	}
+	
+	
 	
 	
 	
