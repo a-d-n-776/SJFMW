@@ -57,12 +57,10 @@ public static void GLDT_Initiate() throws Exception {
 }
 //////////////////////////////////////////////////////////
 public static void GLDT_Initiate_ProductsCheckBoxSelect() throws Exception {
-	
-	
-	
+
     String Product = null;
     String Reason = null;
-   String TemporaryProductNameValue = null;
+    String TemporaryProductNameValue = null;
    
 	SoftAssert softAssert = new SoftAssert();
 	WebDriver driver = BIPS_Login.driver;
@@ -76,7 +74,11 @@ public static void GLDT_Initiate_ProductsCheckBoxSelect() throws Exception {
     						//click on initiate tab
 	WebElement initiate = driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamically
 	initiate.click();
-				//initiate GLDT Case 
+	
+	/////////////////////////////////////////////////////////
+	
+	
+	//initiate GLDT Case 
 	WebElement gldt = driver.findElement(By.xpath("//*[@id=\"RULE_KEY\"]/div/div/div/div/div/div/div[1]/div/div/div/div[2]/span/button/img"));
 	gldt.click();
 	
@@ -103,6 +105,7 @@ public static void GLDT_Initiate_ProductsCheckBoxSelect() throws Exception {
 	Execution_Result_Initiate.Update_GLDT_CaseId();
 	Execution_Result_Initiate.Fill_caseid_and_Result();
 
+	
 	try {
 		FileInputStream fStream = new FileInputStream(new File(xlfilepath));
         
@@ -210,6 +213,9 @@ public static void GLDT_Initiate_ProductsCheckBoxSelect() throws Exception {
 
 
 }
+	
+	
+
 
 public static void GLDT_Initiate_ProductsCheckBoxSelect_And_RAprocess() throws Exception {
 	

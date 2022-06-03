@@ -3,6 +3,8 @@ package GLDT_Methods;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -23,6 +25,7 @@ import BIPS.BIPS_Home;
 import BIPS.BIPS_Initiate;
 import BIPS.BIPS_Login;
 import GLDT_Other_Methods.Execution_Result;
+import GLDT_Other_Methods.Execution_Result_Initiate;
 import GLDT_Other_Methods.Jira_Ticket;
 import GLDT_Other_Methods.ScreenCapture;
 import junit.framework.AssertionFailedError;
@@ -1125,8 +1128,16 @@ public class GLDT_TestCase_Steps {
 public static void initiate_gldtProductsCheckBox0()throws Exception {
 			
 			BIPS_Initiate.GLDT_Initiate_ProductsCheckBoxSelect();
+}
 	
-		}
+			
+			
+			
+			
+			
+			
+			
+
 
 public static void initiate_gldtProductsCheckBox1()throws Exception {
 
@@ -1170,9 +1181,11 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
 	//WebElement initiate = driver.findElement(By.xpath("//*[@class=\'header']"));//Copied the xpath and replace with class as the id is changing dynamically
 	//initiate.click();
 	
-	
+	///Click on initiate tab///
 	WebElement acess = driver.findElement(By.xpath("/html/body/div[3]/form/div[3]/div/section/div/div[1]/div/div/div/div/span/div/div[1]/div/div/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div/div/div/div/div/span/div/div/div/div/div/div/div[7]/div[1]"));
     acess.click();
+    
+  ///Click on Gldt ///
     WebElement Gldt=driver.findElement(By.xpath(" //*[@id=\"RULE_KEY\"]/div/div/div/div[2]/div/div/div/div/div[2]/span/button"));
     Gldt.click();
     
@@ -1225,10 +1238,12 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
         // TODO Auto-generated catch block
         e.printStackTrace();
     }
+	Thread.sleep(10000);
 	WebElement SelectProducts = driver.findElement(By.xpath("//div[@class='content-item content-field item-1 flex']//input[@id='6cbcb0a3']"));
+
 	SelectProducts.clear();
 	SelectProducts.sendKeys(SelectProduct);
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 	//SelectProducts.sendKeys(Keys.DOWN);
 	SelectProducts.sendKeys(Keys.ENTER);
 //	softAssert.assertTrue(selectproduct.isDisplayed());
@@ -1281,6 +1296,7 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
 	////////////////////////////////////////////////
 	row++;
 	row++;
+	Thread.sleep(5000);
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	WebElement ViewTimelines = driver.findElement(By.xpath("//div[@class='content-item content-field item-1 flex flex-row dataValueWrite']//span"));
 	ViewTimelines.click();
@@ -1293,12 +1309,66 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
 	row++;
 	row++;
 	row++;
+	/////////////////////////////////////////
+	Thread.sleep(10000);
 	WebDriverWait wait = new WebDriverWait(driver, 10);
 	WebElement Export = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@title='Click here to show all launch dates in a tabular format, which can be exported to Excel or PDF']")));
 	Export.click();
+	
+
 //	softAssert.assertTrue(country.isDisplayed());
 	row++;
 	Execution_Result.Fill_Execution_Result();
+	
+	/////////////////Close Browser///////////////
+	
+	
+	/////////////////////////////////////////////
+
+    // window handles
+    Set<String> w = driver.getWindowHandles();
+    
+ // window handles iterate
+    Iterator<String> t = w.iterator();
+    String pw = (String) t.next();
+    String ch = (String) t.next();
+     
+    
+    
+ // switching child window
+    driver.switchTo().window(ch);
+    driver.manage().window().maximize();
+    System.out.println("Child window title "+ driver.getTitle());
+    
+    // close the child browser window
+    Thread.sleep(5000);
+    driver.close();
+    
+  // switching parent window
+    //driver.switchTo().window(pw);
+    //System.out.println("Parent window title: "+ driver.getTitle());
+    
+    // window handles2
+    Set<String> ww = driver.getWindowHandles();
+
+ // window handles iterate
+    Iterator<String> tt = ww.iterator();
+    String pww = (String) tt.next();
+    String chh = (String) tt.next();
+ // switching  window1
+    //driver.switchTo().window(pww);
+    //System.out.println("Parent window title: "+ driver.getTitle());
+    
+// switching  window2
+    driver.switchTo().window(chh);
+    driver.manage().window().maximize();
+    System.out.println("Child window title "+ driver.getTitle());
+    
+	////////////////////////////////////////////
+    //driver.manage().window().maximize();
+    //driver.manage().window().minimize();
+	//driver.close();	
+	
 	/////////////////////////////Press "Close" button.//////////////////////////
 	WebElement close = driver.findElement(By.xpath("//button[contains(text(),'Close')]"));
 	close.click();
@@ -1306,7 +1376,7 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
 //	softAssert.assertTrue(home_page.isDisplayed());
 	row++;
 	Execution_Result.Fill_Execution_Result();
-	//////////////////////////////////
+	///////////////////////////////////
 
 	
 	
@@ -1316,14 +1386,12 @@ public static void Access_GLDT_ViewGlobalTimelinesforGLDTcases()throws Exception
 	} catch (InterruptedException e) {
 	  e.printStackTrace();
 	}
-	driver.quit();
+	//driver.quit();
 }
 	
-
-		
-	    
-	    
-	    
+ 
+//ACARDI ;  DK_Temp_Prod-21-09 ; India ;Submission Date ; Base.
+	     
 	    
 
 
